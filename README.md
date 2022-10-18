@@ -4,6 +4,8 @@ A Link Shortener Made with Flask and mongodb 😉
 
 ### Tech Stack Used
 
+![Flask logo] (readme_logos/flask.png)
+
 - [Python](https://www.python.org/) 
 - [MongoDB](https://www.mongodb.com/)
 - [Flask](https://flask.palletsprojects.com/en/2.2.x/)
