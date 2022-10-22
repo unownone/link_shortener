@@ -1,0 +1,76 @@
+body {
+    background-color:beige;
+}
+.header{
+    background-color: black;
+    color: whitesmoke;
+    font-size:100px;
+    text-align: center;
+    width:90%;
+    margin: auto;
+}
+#credit{
+    font-size: 25px;
+    padding-bottom: 10px;
+}
+#credit a{
+    color: aquamarine;
+    text-decoration: none;
+}
+#credit img{
+    border-radius: 50%;
+    width: 50px;
+}
+
+.content{
+    padding-top: 10px;
+    background-color: rgb(198, 196, 196);
+    text-align: center;
+    height:50%;
+    width:90%;
+    margin:20px auto auto auto;
+}
+.content h1{
+    font-size: 60px;
+    padding-bottom: 0px;
+    margin-bottom: 0px;
+}
+
+.content form input[type=text]{
+    height: 50px;
+    width: 800px;
+    background-color:lavenderblush;
+    font-size: 20px;
+    margin-top: 30px;
+    border-radius: 10px;
+    border-color: lavenderblush;
+}
+
+.content form input[type=text]:hover{
+    border-width: 3px;
+    border-style:outset;
+    border-color: rgb(0, 0, 0);
+}
+
+.content form input[type=submit]{
+    height: 50px;
+    width: 200px;
+    background-color:rgb(0, 0, 0);
+    font-size: 20px;
+    border-radius: 20px;
+    color:whitesmoke;
+}
+
+.content form input[type=submit]:hover{
+    height: 50px;
+    width: 200px;
+    background-color:rgb(60, 60, 60);
+    font-size: 20px;
+    border-radius: 20px;
+    color:rgb(255, 255, 255);
+}
+
+.content p{
+    font-size: 30px;
+}
+

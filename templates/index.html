@@ -1,7 +1,27 @@
-<h1>Enter Link</h1>
-<form method="post" action="">
-<label>Please enter Link to Shorten</label>
-<input type="text" name="link" placeholder="abc.xyz/abcdef">
-<input type="submit" name="submit" value="Submit">
-</form>
-<h1 {{hide}}>The link is : <a href="{{url}}">{{url}}</a></h1>
+<html>
+    <head>
+        <title>Link Shortener</title>
+        <link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename='main.css') }}">
+    </head>
+    <body>
+        <div class="header">Link Shorterner
+            <div id="credit">
+                <img src="{{ url_for('static',filename='profile.jpg') }}">
+                By <a href="https://github.com/unownone">unownone</a>
+                
+            </div>
+        </div>
+        <div class="content">
+            <h1>Enter Link</h1>
+            <form method="post" action="">
+                <label>Please enter Link to Shorten</label><br>
+                <input type="text" name="link" placeholder="abc.xyz/abcdef">
+                <input type="submit" name="submit" value="Submit">
+            </form>
+            <p {{hide}}>The link is : <a href="{{url}}">{{url}}</a></p>
+        </div>
+        
+        
+    </body>
+    
+</html>
