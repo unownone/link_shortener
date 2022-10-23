@@ -20,20 +20,22 @@ def get_random_url():
 @app.route('/<url>',methods=['GET'])
 def main(url=''):
     if request.method == 'GET' and url=='':
-        return render_template('index.html',hide='hidden',url='')
+        return render_template('index.html',warning='hidden',hide='hidden',url='' )
     elif request.method == 'POST':
         data = request.form.get('link')
+        if data=='':
+            return render_template('index.html', warning='', hide='hidden', url='')
         ra = get_random_url()
         search = links.find_one({'link':data})
         if search is not None:
-            return render_template('index.html',hide='',url=request.base_url+'/'+ra)
+            return render_template('index.html',warning='hidden',hide='',url=request.base_url+'/'+ra)
         else:
             search = links.find_one({'short':ra})
         while search is not None:
             ra = get_random_url()
             search = links.find_one({'short':ra})
         links.insert_one({'short':ra,'link':data})
-        return render_template('index.html',hide='',url=request.base_url+''+ra)
+        return render_template('index.html',warning='hidden',hide='',url=request.base_url+''+ra)
     elif request.method == 'GET' and url!='':
         search = links.find_one({'short':url})
         if search is not None:
