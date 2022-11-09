@@ -1,0 +1,2 @@
+*.env
+mongodb_data/
