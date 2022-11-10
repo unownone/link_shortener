@@ -11,7 +11,7 @@ jobs:
     steps:
     - uses: actions/checkout@v3
     - name: Build the Docker image
-      run: docker build . ghcr.io/unownone/link-shortener:$(date +%s)
+      run: docker build --tag ghcr.io/unownone/link-shortener:$(date +%s) .
 
     - uses: macbre/push-to-ghcr@master
       with:
