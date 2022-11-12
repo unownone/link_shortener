@@ -6,5 +6,5 @@ WORKDIR /app
 COPY . .
 RUN pip install --no-cache-dir -r requirements.txt
 EXPOSE $PORT
-RUN pip install --no-cache-dir gunicorn
-CMD gunicorn -w 4 -b 0.0.0.0:$PORT app:app
+RUN pip install --no-cache-dir bjoern
+CMD ["python","serve.py"]
