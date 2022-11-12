@@ -1,5 +1,5 @@
 FROM python:3.11.0-alpine3.16
-RUN apk add --no-cache gcc musl-dev linux-headers
+RUN apk add --no-cache gcc musl-dev linux-headers libev-dev
 
 
 WORKDIR /app
